@@ -115,7 +115,7 @@ ResourceRepresentation newResource = new ResourceRepresentation();
 newResource.setName("New Resource");
 newResource.setType("urn:hello-world-authz:resources:example");
 
-newResource.addScope(new ScopeRepresentation("urn:hello-world-authz:scopes:view"));
+newResource.addScope("urn:hello-world-authz:scopes:view");
 
 ProtectedResource resourceClient = authzClient.protection().resource();
 ResourceRepresentation existingResource = resourceClient.findByName(newResource.getName());
